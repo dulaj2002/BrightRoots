@@ -41,7 +41,20 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <main className="flex-grow">
-          <div className="p-8"><h1 className="text-2xl font-bold">Welcome to BrightRoots</h1></div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/learning" element={<LearningPage />} />
+            <Route path="/forum" element={<ForumPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/consultant" element={<ConsultantPage />} />
+            <Route path="/tracker" element={<TrackerPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/parent-dashboard" element={<ParentDashboard />} />
+            <Route path="/consultant-dashboard" element={<ConsultantDashboard />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+          </Routes>
         </main>
         <Footer />
       </div>
