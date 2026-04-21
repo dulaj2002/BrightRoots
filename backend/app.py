@@ -45,71 +45,7 @@ def token_required(f):
             return jsonify({'success': False, 'error': 'Invalid token'}), 401
         return f(current_user, *args, **kwargs)
     return decorated
-def role_required(*roles):
-    def decorator(f):
-        @wraps(f)
-        def decorated_function(current_user, *args, **kwargs):
-            if current_user.role not in roles:
-                return jsonify({'success': False, 'error': 'Unauthorized access'}), 403
-            return f(current_user, *args, **kwargs)
-        return decorated_function
-    return decorator
-@app.route('/api/auth/signup', methods=['POST'])
-def signup():
-    data = request.get_json()
-    required_fields = ['email', 'password', 'full_name', 'role']
-    if not all(field in data for field in required_fields):
-        return jsonify({'success': False, 'error': 'Missing required fields'}), 400
-    if User.query.filter_by(email=data['email']).first():
-        return jsonify({'success': False, 'error': 'Email already registered'}), 400
-    user = User(
-        email=data['email'],
-        full_name=data['full_name'],
-        phone=data.get('phone'),
-        role=data['role'],
-        status='active' if data['role'] == 'parent' else 'pending'
-    )
-    user.set_password(data['password'])
-    if data['role'] == 'consultant':
-        user.specialization = data.get('specialization')
-        user.experience_years = data.get('experience_years')
-        user.bio = data.get('bio')
-    db.session.add(user)
-    db.session.commit()
-    token = jwt.encode({
-        'user_id': user.id,
-        'role': user.role,
-        'exp': datetime.utcnow() + timedelta(days=7)
-    }, app.config['SECRET_KEY'], algorithm='HS256')
-    return jsonify({
-        'success': True,
-        'message': 'Registration successful',
-        'token': token,
-        'user': user.to_dict()
-    }), 201
-@app.route('/api/auth/login', methods=['POST'])
-def login():
-    data = request.get_json()
-    if not data.get('email') or not data.get('password'):
-        return jsonify({'success': False, 'error': 'Email and password required'}), 400
-    user = User.query.filter_by(email=data['email']).first()
-    if not user or not user.check_password(data['password']):
-        return jsonify({'success': False, 'error': 'Invalid email or password'}), 401
-    if user.status != 'active':
-        return jsonify({'success': False, 'error': f'Account is {user.status}. Please contact admin.'}), 403
-    token = jwt.encode({
-        'user_id': user.id,
-        'role': user.role,
-        'exp': datetime.utcnow() + timedelta(days=7)
-    }, app.config['SECRET_KEY'], algorithm='HS256')
-    return jsonify({
-        'success': True,
-        'message': 'Login successful',
-        'token': token,
-        'user': user.to_dict()
-    })
-@app.route('/api/auth/me', methods=['GET'])
-@token_required
+
 def get_current_user(current_user):
     return jsonify({
         'success': True,
