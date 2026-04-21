@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "learning": "Learning Center",
+    "forum": "Parent Forum",
+    "articles": "Articles & Tips",
+    "consultant": "Consult Expert",
+    "tracker": "Growth Tracker",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Nurturing Bright Futures",
+    "subtitle": "Supporting parents in the magical journey of child development from birth to 5 years",
+    "cta_primary": "Start Learning",
+    "cta_secondary": "Explore Resources"
+  },
+  "learning": {
+    "title": "Interactive Learning Center",
+    "subtitle": "Engaging content to develop your child's knowledge",
+    "shapes": "Shapes",
+    "colors": "Colors",
+    "numbers": "Numbers",
+    "animals": "Animals",
+    "letters": "Letters"
+  },
+  "forum": {
+    "title": "Parent Discussion Forum",
+    "subtitle": "Connect with other parents, share experiences, and learn together",
+    "new_topic": "Start New Discussion",
+    "categories": "Topics",
+    "recent": "Recent Discussions",
+    "popular": "Popular Topics"
+  },
+  "articles": {
+    "title": "Articles & Tips",
+    "subtitle": "Expert advice for your child's development",
+    "latest": "Latest Articles",
+    "categories": "Categories",
+    "read_more": "Read More"
+  },
+  "consultant": {
+    "title": "Consult Our Experts",
+    "subtitle": "Get personalized guidance from child development specialists",
+    "book": "Book Consultation",
+    "online": "Online Consultation",
+    "inperson": "In-Person Visit"
+  },
+  "tracker": {
+    "title": "Child Growth Tracker",
+    "subtitle": "Track your child's milestones and daily activities",
+    "add_task": "Add Task",
+    "milestones": "Milestones",
+    "daily": "Daily Tasks",
+    "weekly": "Weekly Goals"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers to common parenting questions",
+    "search": "Search questions...",
+    "popular": "Most Popular Questions",
+    "ask": "Ask a Question"
+  },
+  "common": {
+    "learn_more": "Learn More",
+    "get_started": "Get Started",
+    "read_more": "Read More",
+    "sign_up": "Sign Up",
+    "login": "Login",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close"
+  },
+  "footer": {
+    "about": "About Us",
+    "quick_links": "Quick Links",
+    "contact": "Contact Us",
+    "address": "123 Parent Care Street, Colombo",
+    "phone": "+94 11 234 5678",
+    "email": "info@brightroots.lk",
+    "social": "Follow Us",
+    "copyright": "© 2026 BrightRoots. All rights reserved."
+  }
+}
