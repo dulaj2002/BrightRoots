@@ -61,7 +61,27 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           {}
-         
+          <div>
+            <h3 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact Us</h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="flex items-start space-x-2 sm:space-x-3">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary-400 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-400 text-xs sm:text-sm">{t('footer.address')}</span>
+              </li>
+              <li className="flex items-center space-x-2 sm:space-x-3">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary-400 flex-shrink-0" />
+                <a href={`tel:${t('footer.phone')}`} className="text-gray-400 hover:text-primary-400 transition-colors text-xs sm:text-sm">
+                  {t('footer.phone')}
+                </a>
+              </li>
+              <li className="flex items-center space-x-2 sm:space-x-3">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary-400 flex-shrink-0" />
+                <a href={`mailto:${t('footer.email')}`} className="text-gray-400 hover:text-primary-400 transition-colors text-xs sm:text-sm">
+                  {t('footer.email')}
+                </a>
+              </li>
+            </ul>
+          </div>
           {}
           <div className="xs:col-span-2 md:col-span-1">
             <h3 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Follow Us</h3>
