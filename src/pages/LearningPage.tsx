@@ -3,61 +3,175 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 const LearningPage: React.FC = () => {
   const { t } = useTranslation();
-  const [selectedCategory, setSelectedCategory] = useState('shapes');
-  const shapes = [
-    { name: 'Circle', image: '🔵', color: '#3B82F6' },
-    { name: 'Square', image: '🟦', color: '#8B5CF6' },
-    { name: 'Triangle', image: '🔺', color: '#EF4444' },
-    { name: 'Star', image: '⭐', color: '#F59E0B' },
-    { name: 'Heart', image: '❤️', color: '#EC4899' },
-    { name: 'Diamond', image: '💎', color: '#06B6D4' },
-  ];
-  const colors = [
-    { name: 'Red', image: '🔴', code: '#EF4444' },
-    { name: 'Blue', image: '🔵', code: '#3B82F6' },
-    { name: 'Green', image: '🟢', code: '#10B981' },
-    { name: 'Yellow', image: '🟡', code: '#F59E0B' },
-    { name: 'Purple', image: '🟣', code: '#8B5CF6' },
-    { name: 'Orange', image: '🟠', code: '#F97316' },
-    { name: 'Pink', image: '🩷', code: '#EC4899' },
-    { name: 'Brown', image: '🟤', code: '#92400E' },
-  ];
-  const animals = [
-    { name: 'Cat', image: '🐱', sound: 'Meow' },
-    { name: 'Dog', image: '🐶', sound: 'Woof' },
-    { name: 'Cow', image: '🐮', sound: 'Moo' },
-    { name: 'Lion', image: '🦁', sound: 'Roar' },
-    { name: 'Elephant', image: '🐘', sound: 'Trumpet' },
-    { name: 'Monkey', image: '🐵', sound: 'Ooh Ooh' },
-    { name: 'Bird', image: '🐦', sound: 'Tweet' },
-    { name: 'Fish', image: '🐠', sound: 'Blub' },
-  ];
-  const numbers = [
-    { number: '1', image: '1️⃣', items: '🍎' },
-    { number: '2', image: '2️⃣', items: '🍎🍎' },
-    { number: '3', image: '3️⃣', items: '🍎🍎🍎' },
-    { number: '4', image: '4️⃣', items: '🍎🍎🍎🍎' },
-    { number: '5', image: '5️⃣', items: '🍎🍎🍎🍎🍎' },
-    { number: '6', image: '6️⃣', items: '🍎🍎🍎🍎🍎🍎' },
-    { number: '7', image: '7️⃣', items: '🍎🍎🍎🍎🍎🍎🍎' },
-    { number: '8', image: '8️⃣', items: '🍎🍎🍎🍎🍎🍎🍎🍎' },
-  ];
-  const letters = [
-    { letter: 'A', image: '🍎', word: 'Apple' },
-    { letter: 'B', image: '🎈', word: 'Balloon' },
-    { letter: 'C', image: '😺', word: 'Cat' },
-    { letter: 'D', image: '🐶', word: 'Dog' },
-    { letter: 'E', image: '🐘', word: 'Elephant' },
-    { letter: 'F', image: '🐠', word: 'Fish' },
-    { letter: 'G', image: '🍇', word: 'Grapes' },
-    { letter: 'H', image: '🏠', word: 'House' },
-  ];
+  const [selectedCategory, setSelectedCategory] = useState('age-0-1');
+  const ageActivities = {
+    'age-0-1': [
+      {
+        name: 'Tummy Time',
+        image: '🧸',
+        color: '#EC4899',
+        description: 'Short supervised tummy time to build neck and shoulder strength.',
+      },
+      {
+        name: 'High Contrast Cards',
+        image: '🖤',
+        color: '#111827',
+        description: 'Show bold black-and-white patterns to support early visual tracking.',
+      },
+      {
+        name: 'Soft Sound Play',
+        image: '🔔',
+        color: '#F59E0B',
+        description: 'Use gentle rattles and soft music to encourage listening and calm focus.',
+      },
+      {
+        name: 'Face-to-Face Talking',
+        image: '🙂',
+        color: '#3B82F6',
+        description: 'Talk, smile, and mirror expressions to build bonding and early communication.',
+      },
+      {
+        name: 'Reach and Grasp',
+        image: '🖐️',
+        color: '#10B981',
+        description: 'Offer safe toys for reaching, holding, and exploring with hands.',
+      },
+    ],
+    'age-1-2': [
+      {
+        name: 'Stacking Cups',
+        image: '🪣',
+        color: '#8B5CF6',
+        description: 'Stack and knock down cups to practice hand control and problem solving.',
+      },
+      {
+        name: 'Point and Name',
+        image: '👆',
+        color: '#3B82F6',
+        description: 'Point to animals, objects, and body parts while naming them together.',
+      },
+      {
+        name: 'Walk and Chase',
+        image: '🚶',
+        color: '#F97316',
+        description: 'Encourage walking after bubbles or a rolling ball to build movement confidence.',
+      },
+      {
+        name: 'Simple Songs',
+        image: '🎵',
+        color: '#EC4899',
+        description: 'Sing repeating songs with hand motions to support language and rhythm.',
+      },
+      {
+        name: 'Sort Big and Small',
+        image: '🧺',
+        color: '#10B981',
+        description: 'Sort safe toys by size, color, or type with your help.',
+      },
+    ],
+    'age-2-3': [
+      {
+        name: 'Color Match',
+        image: '🎨',
+        color: '#EC4899',
+        description: 'Match toys, blocks, or cards by color to strengthen early thinking skills.',
+      },
+      {
+        name: 'Pretend Cooking',
+        image: '🍲',
+        color: '#F59E0B',
+        description: 'Use toy utensils and play food to build imagination and vocabulary.',
+      },
+      {
+        name: 'Ball Toss',
+        image: '⚽',
+        color: '#3B82F6',
+        description: 'Roll or toss a soft ball back and forth to improve coordination.',
+      },
+      {
+        name: 'Picture Story Time',
+        image: '📚',
+        color: '#8B5CF6',
+        description: 'Look at picture books and ask simple questions about what you see.',
+      },
+      {
+        name: 'Follow Two Steps',
+        image: '🪜',
+        color: '#10B981',
+        description: 'Give two-step directions like “pick up the toy and put it in the box.”',
+      },
+    ],
+    'age-3-4': [
+      {
+        name: 'Shape Hunt',
+        image: '🔺',
+        color: '#EF4444',
+        description: 'Find circles, squares, and triangles around the home or classroom.',
+      },
+      {
+        name: 'Cut and Paste',
+        image: '✂️',
+        color: '#8B5CF6',
+        description: 'Practice safe scissor skills with paper strips and glue sticks.',
+      },
+      {
+        name: 'Counting Games',
+        image: '🔢',
+        color: '#3B82F6',
+        description: 'Count toys, steps, or snacks together up to 10 and beyond.',
+      },
+      {
+        name: 'Emotion Faces',
+        image: '😊',
+        color: '#EC4899',
+        description: 'Name happy, sad, angry, and calm faces to grow emotional awareness.',
+      },
+      {
+        name: 'Obstacle Course',
+        image: '🛝',
+        color: '#10B981',
+        description: 'Create a simple indoor course with pillows, tunnels, and crawling spaces.',
+      },
+    ],
+    'age-4-5': [
+      {
+        name: 'Letter Hunt',
+        image: '🔤',
+        color: '#8B5CF6',
+        description: 'Search for letters in books, signs, and labels around the house.',
+      },
+      {
+        name: 'Story Retell',
+        image: '🗣️',
+        color: '#F97316',
+        description: 'Ask your child to retell a story using beginning, middle, and end.',
+      },
+      {
+        name: 'Pattern Blocks',
+        image: '🟪',
+        color: '#3B82F6',
+        description: 'Build and copy patterns with blocks, beads, or colored paper.',
+      },
+      {
+        name: 'Name Writing Practice',
+        image: '✍️',
+        color: '#EC4899',
+        description: 'Trace letters, draw lines, and practice writing first name with support.',
+      },
+      {
+        name: 'Team Games',
+        image: '🤝',
+        color: '#10B981',
+        description: 'Play simple turn-taking games that teach patience, sharing, and cooperation.',
+      },
+    ],
+  };
   const categories = [
-    { id: 'shapes', label: t('learning.shapes'), data: shapes },
-    { id: 'colors', label: t('learning.colors'), data: colors },
-    { id: 'animals', label: t('learning.animals'), data: animals },
-    { id: 'numbers', label: t('learning.numbers'), data: numbers },
-    { id: 'letters', label: t('learning.letters'), data: letters },
+    { id: 'age-0-1', label: t('learning.age_0_1'), data: ageActivities['age-0-1'] },
+    { id: 'age-1-2', label: t('learning.age_1_2'), data: ageActivities['age-1-2'] },
+    { id: 'age-2-3', label: t('learning.age_2_3'), data: ageActivities['age-2-3'] },
+    { id: 'age-3-4', label: t('learning.age_3_4'), data: ageActivities['age-3-4'] },
+    { id: 'age-4-5', label: t('learning.age_4_5'), data: ageActivities['age-4-5'] },
   ];
   const getCurrentData = () => {
     const category = categories.find(c => c.id === selectedCategory);
@@ -122,24 +236,10 @@ const LearningPage: React.FC = () => {
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
                     {item.name || item.number || item.letter}
                   </h3>
-                  {item.sound && (
-                    <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 italic">
-                      "{item.sound}"
+                  {item.description && (
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {item.description}
                     </p>
-                  )}
-                  {item.word && (
-                    <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400">
-                      {item.word}
-                    </p>
-                  )}
-                  {item.items && (
-                    <p className="text-lg sm:text-xl md:text-2xl mt-1 sm:mt-2">{item.items}</p>
-                  )}
-                  {item.code && (
-                    <div
-                      className="mt-2 sm:mt-3 mx-auto w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 sm:border-4 border-white shadow-lg"
-                      style={{ backgroundColor: item.code }}
-                    />
                   )}
                 </div>
               </motion.div>
