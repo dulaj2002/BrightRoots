@@ -16,6 +16,7 @@ A comprehensive platform for parents to support their children's development fro
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
+4. Build for development: `npm run build:dev`
 
 ## Technologies Used
 
