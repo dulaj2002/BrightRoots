@@ -172,7 +172,25 @@
     "delete": "Delete",
     "close": "Close"
   },
-  "footer": {
+  "testimonials": {
+    "title": "What Parents Say",
+    "subtitle": "Hear from parents who have used BrightRoots",
+    "testimonial1": {
+      "content": "BrightRoots has been a game-changer for our family. The activities are engaging and perfectly suited to my 2-year-old's development stage.",
+      "name": "Sarah Johnson",
+      "role": "Mother of 2"
+    },
+    "testimonial2": {
+      "content": "The expert advice and community support have given me confidence in my parenting journey. Highly recommended!",
+      "name": "Michael Chen",
+      "role": "Father of 1"
+    },
+    "testimonial3": {
+      "content": "As a working parent, I appreciate the quick, effective activities that fit into our busy schedule.",
+      "name": "Priya Patel",
+      "role": "Mother of 3"
+    }
+  },
     "about": "About Us",
     "quick_links": "Quick Links",
     "contact": "Contact Us",
