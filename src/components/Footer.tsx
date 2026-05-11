@@ -103,6 +103,22 @@ const Footer: React.FC = () => {
               })}
             </div>
           </div>
+          <div className="xs:col-span-2 md:col-span-1">
+            <h3 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">{t('footer.newsletter')}</h3>
+            <p className="text-gray-400 text-xs sm:text-sm mb-3">
+              {t('footer.newsletter_subscribe')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder={t('footer.newsletter_placeholder')}
+                className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm focus:outline-none focus:border-primary-500"
+              />
+              <button className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-xs sm:text-sm font-medium transition-colors">
+                {t('footer.newsletter_button')}
+              </button>
+            </div>
+          </div>
         </div>
         {}
         <div className="border-t border-gray-800 pt-6 sm:pt-8">

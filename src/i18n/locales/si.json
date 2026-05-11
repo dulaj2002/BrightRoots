@@ -180,6 +180,10 @@
     "phone": "+94 11 234 5678",
     "email": "info@brightroots.lk",
     "social": "අපව අනුගමනය කරන්න",
+    "newsletter": "පුවත් ලිපිය",
+    "newsletter_subscribe": "අපගේ පුවත් ලිපියට දායම් කරන්න",
+    "newsletter_placeholder": "ඔබේ ඊමේල් ආදානය කරන්න",
+    "newsletter_button": "දායම් කරන්න",
     "copyright": "© 2026 BrightRoots. සියලුම හිමිකම් ඇවිරිණි."
   }
 }
