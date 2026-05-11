@@ -191,6 +191,23 @@
       "role": "Mother of 3"
     }
   },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team of child development experts. We're here to help you on your parenting journey.",
+    "get_in_touch": "Get In Touch",
+    "send_message": "Send us a Message",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send_message_button": "Send Message",
+    "address": "Address",
+    "phone": "Phone",
+    "email_label": "Email",
+    "business_hours": "Business Hours",
+    "business_hours_value": "Mon - Fri: 9:00 AM - 6:00 PM"
+  },
     "about": "About Us",
     "quick_links": "Quick Links",
     "contact": "Contact Us",
