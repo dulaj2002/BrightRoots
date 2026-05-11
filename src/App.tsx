@@ -8,7 +8,7 @@ import ForumPage from './pages/ForumPage.tsx';
 import ArticlesPage from './pages/ArticlesPage.tsx';
 import ConsultantPage from './pages/ConsultantPage.tsx';
 import TrackerPage from './pages/TrackerPage.tsx';
-import FAQPage from './pages/FAQPage.tsx';
+import ContactPage from './pages/ContactPage.tsx';
 import LoginPage from './pages/LoginPage.tsx';
 import SignupPage from './pages/SignupPage.tsx';
 import ParentDashboard from './pages/ParentDashboard.tsx';
@@ -49,6 +49,7 @@ function App() {
             <Route path="/consultant" element={<ConsultantPage />} />
             <Route path="/tracker" element={<TrackerPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/parent-dashboard" element={<ParentDashboard />} />
