@@ -1,6 +1,7 @@
 {
   "name": "brightroots",
   "private": true,
+  "description": "A comprehensive platform for parents to support their children's development",
   "version": "1.0.1",
   "type": "module",
   "scripts": {
