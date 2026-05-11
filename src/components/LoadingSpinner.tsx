@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// LoadingSpinner component with customizable size and color
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: string;
