@@ -10,6 +10,7 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
+// Footer component with newsletter signup and social links
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
