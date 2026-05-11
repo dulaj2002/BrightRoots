@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     { path: '/articles', label: t('nav.articles') },
     { path: '/consultant', label: t('nav.consultant') },
     { path: '/tracker', label: t('nav.tracker') },
-    { path: '/faq', label: t('nav.faq') },
+    { path: '/contact', label: t('nav.contact') },
   ];
   const socialLinks = [
     { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
