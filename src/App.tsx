@@ -15,6 +15,7 @@ import ParentDashboard from './pages/ParentDashboard.tsx';
 import ConsultantDashboard from './pages/ConsultantDashboard.tsx';
 import AdminDashboard from './pages/AdminDashboard.tsx';
 import ScrollToTop from './components/ScrollToTop';
+// Main App component with routing and dark mode support
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
