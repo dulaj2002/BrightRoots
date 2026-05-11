@@ -121,7 +121,11 @@
     "activity_name_writing": "Name Writing Practice",
     "activity_name_writing_desc": "Trace letters, draw lines, and practice writing first name with support.",
     "activity_team_games": "Team Games",
-    "activity_team_games_desc": "Play turn-taking games that teach patience, sharing, and cooperation."
+    "activity_team_games_desc": "Play turn-taking games that teach patience, sharing, and cooperation.",
+    "activity_rhythm_clapping": "Rhythm Clapping",
+    "activity_rhythm_clapping_desc": "Clap simple rhythms together to develop timing and coordination.",
+    "activity_color_sorting": "Color Sorting Game",
+    "activity_color_sorting_desc": "Sort objects by color to build categorization and matching skills."
   },
   "forum": {
     "title": "Parent Discussion Forum",
