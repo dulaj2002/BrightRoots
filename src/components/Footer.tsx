@@ -13,7 +13,6 @@ import {
 // Footer component with newsletter signup and social links
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
   const quickLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/learning', label: t('nav.learning') },
@@ -125,7 +124,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
             <p className="text-gray-400 text-xs sm:text-sm text-center md:text-left">
-              © {currentYear} BrightRoots. All rights reserved.
+              © 2026 BrightRoots. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
               <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">
