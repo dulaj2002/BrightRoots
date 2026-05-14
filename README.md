@@ -1,6 +1,6 @@
 # BrightRoots
 
-A comprehensive platform for parents to support their children's development from birth to 5 years.
+A comprehensive platform for parents to support their children's development from birth to 3 years.
 
 ## Features
 
@@ -11,12 +11,6 @@ A comprehensive platform for parents to support their children's development fro
 - Articles and Tips from specialists
 - FAQ section
 
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Build for development: `npm run build:dev`
 
 ## Technologies Used
 
@@ -27,10 +21,7 @@ A comprehensive platform for parents to support their children's development fro
 - React Router
 - React i18next for internationalization
 
-## Contributing
 
-We welcome contributions! Please read our contributing guidelines before getting started.
 
-## License
 
-This project is licensed under the MIT License.
+
